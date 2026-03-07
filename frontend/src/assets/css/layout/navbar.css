@@ -1,0 +1,40 @@
+.header {
+    height: 3.75rem;
+    background-color: var(--navFooder);
+}
+
+.nav__logo-txt,
+.nav__btnSesion-txt,
+.nav__item-txt {
+    color: var(--blanco);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    margin-left: 0.313rem;
+}
+
+.nav__lst {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.nav__btnSesion{
+    margin-right: 0.625rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav__btnSesion-txt{
+    background-color: var(--botonesSecciones);
+}
+
+.nav__btnSesion-txt:hover{
+    color: var(--blanco);
+    background-color: var(--botonesHover);
+}
