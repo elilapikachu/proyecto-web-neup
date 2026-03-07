@@ -1,4 +1,7 @@
-@import "./var.css";
+@import "./variables/var.css";
+@import "./variables/sizzesvar.css";
+@import "./layout/navbar.css";
+@import "./layout/footer.css";
 
 * {
     margin: 0;
