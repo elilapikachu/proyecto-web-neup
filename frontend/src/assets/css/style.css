@@ -1,11 +1,209 @@
-@import "./var.css";
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.navbar-neup {
+  background-color: var(--nav-bg);
+  padding: 1rem 2rem;
 }
 
-body {
-    font-family: var(--letra);
+.navbar-neup .navbar-brand {
+  color: var(--blanco);
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: var(--letra);
+}
+
+.navbar-neup .nav-link {
+  color: var(--nav-link);
+  font-weight: 600;
+}
+
+.navbar-neup .nav-link:hover {
+  color: var(--nav-link-hover);
+}
+
+.navbar-neup .nav-link.active {
+  color: var(--blanco);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--nav-btn-naranja);
+  opacity: 1;
+}
+
+.navbar-neup .btn-outline-success {
+  color: var(--blanco);
+  border-color: var(--blanco);
+  background-color: transparent;
+}
+
+.navbar-neup .btn-outline-success:hover {
+  background-color: var(--blanco);
+  color: var(--nav-bg);
+}
+
+.navbar-neup .btn-success {
+  background-color: var(--nav-btn-naranja);
+  border-color: var(--nav-btn-naranja);
+  color: var(--blanco);
+}
+
+.navbar-neup .btn-success:hover {
+  background-color: var(--nav-btn-naranja-hover);
+  border-color: var(--nav-btn-naranja-hover);
+}
+
+.footer-neup {
+  background-color: var(--navFooder);
+  color: var(--blanco);
+  text-align: center;
+  padding: 3rem 2rem 1.5rem;
+  border-radius: 40px 40px 0 0;
+}
+
+.footer-top h2 {
+  font-family: var(--letra-titulo);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.footer-top p {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+.footer-middle p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.footer-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.footer-icon img {
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s;
+}
+
+.footer-icon:hover img {
+  transform: scale(1.1);
+}
+
+.footer-icon span {
+  font-size: 0.85rem;
+  color: var(--blanco);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.franja-dietas {
+  background-color: #ffffff;
+}
+
+.franja-dietas h2 {
+  font-family: var(--letra-titulo);
+  color: #1a1a1a;
+}
+
+.franja-subtitulo {
+  color: #888;
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+.franja-recetas {
+  background-color: var(--botonesSecciones);
+}
+
+.franja-recetas h2,
+.franja-recetas .franja-subtitulo {
+  color: #ffffff;
+}
+
+.franja-about {
+  background-color: #1a1a1a;
+  background-image: url('/frontend/src/assets/img/fondo.jpg');
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: #ffffff;
+}
+
+.card-franja {
+  display: flex;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: transform 0.2s;
+}
+
+.card-franja:hover {
+  transform: translateY(-3px);
+}
+
+.card-franja-img {
+  width: 85px;
+  height: 85px;
+  min-width: 85px;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #e0e0e0;
+}
+
+.card-franja-body h5 {
+  font-family: var(--letra-titulo);
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: #1a1a1a;
+}
+
+.card-franja-body p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.card-about {
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #1a1a1a;
+  border-radius: 14px;
+  padding: 2rem;
+  text-align: left;
+  height: 100%;
+}
+
+.card-about h5 {
+  font-family: var(--letra-titulo);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--navFooder);
+}
+
+.card-about p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #444;
 }
