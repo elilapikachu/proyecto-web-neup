@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="./assets/img/inicio/icono3.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/frontend/src/assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container_registro">
+        <div class="lado_imagen"></div>
+        <div class="from__box">
+            <div class="button__box">
+                <div id="elegir" class="btn_registro_inicio_secion"> </div>
+                <button type="button" class="toggle-btn" id="InicioSesionBtn" onclick="InicioSesion()">Iniciar
+                    Sesión</button>
+                <button type="button" class="toggle-btn" id="registroBtn" onclick="registro1()">Registro</button>
+            </div>
+            <form id="registro1" class="grupos">
+                <input type="text" class="inputs" id="NomApe" placeholder="Nombre y Apellidos" required>
+                <select class="form-select-genero inputs" id="genero" required>
+                    <option value="" disabled selected>Género</option>
+                    <option value="0">Masculino</option>
+                    <option value="1">Femenino</option>
+                    <option value="2">Otro</option>
+                    <option value="3">Prefiero no decirlo</option>
+                </select>
+                <input type="email" class="inputs" id="Email_Registro" placeholder="Email" required>
+                <input type="password" class="inputs" placeholder="Contraseña" id="contrasena_registro" required>
+                <input type="checkbox" class="checkbox" id="Terminos" required><span>Acepto los terminos y
+                    condiciones</span>
+                <button type="submit" class="submit-btn" id="sesion">Registrarse</button>
+            </form>
+            <form id="InicioSesion" class="grupos">
+                <input type="email" class="inputs" id="Email_Sesion" placeholder="Email" required>
+                <input type="password" class="inputs" placeholder="Contraseña" id="contrasena_sesion" required>
+                <input type="checkbox" class="checkbox" id="recordatorio"><span>Recordar Contraseña</span>
+                <button type="submit" class="submit-btn">Acceder</button>
+            </form>
+        </div>
+
+        <script src="/frontend/src/assets/js/login.js"></script>
+        <script src="/frontend/src/assets/js/registro_form.js"></script>
+        <script src="/frontend/src/assets/js/ocultar.js"></script>
+        <script src="/frontend/src/assets/js/Registro.js"></script>
+</body>
+
+</html>

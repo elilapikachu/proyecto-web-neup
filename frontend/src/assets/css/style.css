@@ -1,4 +1,7 @@
 @import "./var.css";
+@import "./formPerfil.css";
+@import "./Registro.css";
+
 
 * {
     margin: 0;
