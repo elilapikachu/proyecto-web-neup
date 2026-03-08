@@ -1,0 +1,6 @@
+
+.footer {
+    height: 31.25rem;
+    background-color: var(--navFooder);
+    border-radius: 70px 70px 0 0;
+}
