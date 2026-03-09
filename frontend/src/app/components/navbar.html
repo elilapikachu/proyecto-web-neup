@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-neup">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/frontend/src/index.html">NEUP</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link" href="/frontend/src/index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/frontend/src/app/pages/aboutus.html">Sobre nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/frontend/src/app/pages/diet.html">Dietas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/frontend/src/app/pages/recipes.html">Recetas</a>
+        </li>
+      </ul>
+      <div class="d-flex gap-2">
+        <a class="btn btn-outline-success" href="/frontend/src/app/pages/login.html">Iniciar sesión</a>
+        <a class="btn btn-success" href="/frontend/src/app/pages/singin.html">Registrarse</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const links = document.querySelectorAll('.navbar-neup .nav-link');
+  links.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active');
+    }
+  });
+</script>
