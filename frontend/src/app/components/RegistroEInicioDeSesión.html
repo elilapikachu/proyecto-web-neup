@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/frontend/src/assets/css/style.css">
 
 </head>
-
 <body>
     <div class="container_registro">
         <div class="lado_imagen"></div>
@@ -31,21 +30,23 @@
                 </select>
                 <input type="email" class="inputs" id="Email_Registro" placeholder="Email" required>
                 <input type="password" class="inputs" placeholder="Contraseña" id="contrasena_registro" required>
-                <input type="checkbox" class="checkbox" id="Terminos" required><span>Acepto los terminos y
+                <input type="checkbox" class="checkbox" id="Terminos" required><span class="spanRegistro">Acepto los terminos y
                     condiciones</span>
                 <button type="submit" class="submit-btn" id="sesion">Registrarse</button>
             </form>
             <form id="InicioSesion" class="grupos">
                 <input type="email" class="inputs" id="Email_Sesion" placeholder="Email" required>
                 <input type="password" class="inputs" placeholder="Contraseña" id="contrasena_sesion" required>
-                <input type="checkbox" class="checkbox" id="recordatorio"><span>Recordar Contraseña</span>
+                <input type="checkbox" class="checkbox" id="recordatorio"><span class="spanRegistro">Recordar Contraseña</span>
                 <button type="submit" class="submit-btn">Acceder</button>
             </form>
         </div>
-
+        <div class="volverPaginaPrincipal">
+            <button class="submit-btn btn_regresar_pagina_principal"><a href="/frontend/src/index.html">Volver a la página principal</a> </button>
+        </div>
+    </div>
         <script src="/frontend/src/assets/js/login.js"></script>
         <script src="/frontend/src/assets/js/registro_form.js"></script>
-        <script src="/frontend/src/assets/js/ocultar.js"></script>
         <script src="/frontend/src/assets/js/Registro.js"></script>
 </body>
 

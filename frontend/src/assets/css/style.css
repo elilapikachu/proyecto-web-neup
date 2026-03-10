@@ -1,9 +1,9 @@
-@import "./formPerfil.css";
-@import "./Registro.css";
 @import "./variables/var.css";
 @import "./variables/sizzesvar.css";
+@import "./Registro.css";
 @import "./layout/navbar.css";
 @import "./layout/footer.css";
+@import "./perfil.css";
 
 * {
     margin: 0;

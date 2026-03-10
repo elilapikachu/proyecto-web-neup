@@ -18,14 +18,10 @@ loginForm.addEventListener('submit', (e) => {
     alert(`Bienvenido ${validUser.name}`)
 
     localStorage.setItem('UsuarioLogueado', JSON.stringify(validUser))
+    console.log(validUser)
 
-    /*const perfil = JSON.parse(localStorage.getItem('perfil_' + validUser.email))
+    localStorage.setItem('emailUsuario', validUser.email)
+    console.log(validUser.email)
 
-    if(perfil){
-        window.location.href = "/index.html"
-    }else{
-        window.location.href = "/frontend/src/app/components/formPerfil.html"
-    }*/
-   window.location.href = "/frontend/src/app/components/formPerfil.html"
-
+    window.location.href = "/frontend/src/app/components/perfilDelUsuario.html"
 })

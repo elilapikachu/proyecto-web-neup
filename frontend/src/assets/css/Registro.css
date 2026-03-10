@@ -5,6 +5,7 @@
     background-size:cover;
     background-image:url("/frontend/src/assets/img/fondoRegistro.png");
     background-position:center;
+    position:relative;
 }
 
 .lado_imagen{
@@ -100,7 +101,7 @@
     margin: 1.875rem 0.625rem 1.875rem 0;
 }
 
-span{
+.spanRegistro{
   color: var(--negro);
   font-size: 0.75rem;
   bottom: 4rem;
@@ -114,4 +115,18 @@ span{
 
 #InicioSesion{
     left: 3.125rem;
+}
+
+.btn_regresar_pagina_principal{
+    width:auto;
+    padding:0.6rem 1.2rem;
+    position:absolute;
+    bottom:1rem;
+    right:4rem;
+    border-radius: 1.875rem;
+}
+
+.btn_regresar_pagina_principal a{
+    text-decoration: none;
+    color: var(--blanco);
 }
