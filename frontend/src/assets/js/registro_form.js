@@ -1,4 +1,3 @@
-
 const signupForm = document.querySelector('#registro1');
 var a = document.getElementById("InicioSesion");
 signupForm.addEventListener('submit', (e) => {

@@ -12,34 +12,7 @@
 </head>
 
 <body>
-    <header class="container-fluid pt-2 header">
-        <nav class="row nav d-flex align-items-center">
-            <div class="nav__logo col-sm-3">
-                <p class="nav__logo-txt h3 text-start">NEUP</p>
-            </div>
-            <div class="nav__ul col-sm-3">
-                <ul class="nav__lst list-inline">
-                    <li class="nav__lst-item"><a class="nav__item-txt text-decoration-none" href="/frontend/src/index.html">Inicio</a></li>
-                    <li class="nav__lst-item"><a class="nav__item-txt text-decoration-none" href="">Sobre nosotros</a>
-                    </li>
-                    <li class="nav__lst-item"><a class="nav__item-txt text-decoration-none" href="">Dietas</a></li>
-                    <li class="nav__lst-item"><a class="nav__item-txt text-decoration-none" href="">Recetas</a></li>
-                </ul>
-            </div>
-            <div class="nav__btnSesion col-sm-3">
-                <a id="registro" class="nav__btnSesion-txt text-decoration-none btn btn-sm"
-                    href="/frontend/src/app/components/RegistroEInicioDeSesión.html">Iniciar Sesión / Registrarse</a>
-                <div id="logueado">
-                    <a class="nav__item-txt Nom_usuario" id="usuarioPerfil"
-                        href="/frontend/src/app/components/perfilDelUsuario.html">Nom_Usuario</a>
-
-                    <button class="cerrar submit-btn" id="logout">
-                        <b>Cerrar Sesión</b>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <heater id="navbar-container"></heater>
     <main class="mainPerfil">
         <div class="page-wrapper">
             <div class="profile-hero">
@@ -208,9 +181,10 @@
         </div>
 
     </main>
-
-    <script src="/frontend/src/assets/js/ocultar.js"></script>
-    <script src="/frontend/src/assets/js/cerrarsesion.js"></script>
+    
+    <div id="footer-container"></div>
+    <script src="/frontend/src/assets/js/footer.js"></script>
+    <script src="/frontend/src/assets/js/nav.js"></script>
     <script src="/frontend/src/assets/js/variablesDeUsuarioLogueado.js"></script>
     <script src="/frontend/src/assets/js/formPerfil.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

@@ -4,13 +4,10 @@
 @import "./layout/navbar.css";
 @import "./layout/footer.css";
 @import "./perfil.css";
+@import "./dietas.css";
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: var(--letra);
 }

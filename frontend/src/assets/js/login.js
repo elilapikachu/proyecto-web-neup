@@ -23,5 +23,5 @@ loginForm.addEventListener('submit', (e) => {
     localStorage.setItem('emailUsuario', validUser.email)
     console.log(validUser.email)
 
-    window.location.href = "/frontend/src/app/components/perfilDelUsuario.html"
+    window.location.href = "/frontend/src/index.html"
 })
