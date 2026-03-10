@@ -1,180 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recetas — NEUP</title>
+  <title>NEUP — Recetas</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="/frontend/src/assets/icons/fav-icon-index.png" type="image/x-icon">
   <link rel="stylesheet" href="/frontend/src/assets/css/style.css">
+  <link rel="stylesheet" href="/frontend/src/assets/css/index.css">
+  <link rel="stylesheet" href="/frontend/src/assets/css/recetas.css">
 </head>
-<body>
+
+<body class="mainRecetas">
+
   <div id="navbar-container"></div>
-  <main>
-    <section class="hero-recetas">
-      <div class="container">
-        <div class="row align-items-center">
 
-          <div class="col-lg-6 hero-recetas-texto mb-4 mb-lg-0">
-            <h1>Recetas <span>saludables</span><br>para cada día</h1>
-            <p>Descubre platos deliciosos preparados con ingredientes naturales. Come bien, vive mejor.</p>
-            <a href="#recetas" class="btn-explorar">Explorar recetas</a>
-          </div>
+  <main class="page-wrapper-index">
 
-          <div class="col-lg-6 hero-recetas-imagen">
-            <div class="circulo-fondo"></div>
-            <img src="../../assets/img/platoComida.jpeg" alt="Plato saludable">
-          </div>
-
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero-card hero-recetas-card">
+      <div class="hero-card-inner">
+        <div class="hero-tag">
+          <span class="hero-tag-dot"></span>
+          Cocina saludable
+        </div>
+        <h1 class="hero-title">
+          Comer sano no tiene<br>que ser <span>aburrido</span>
+        </h1>
+        <p class="hero-subtitle">
+          Olvida las dietas rígidas y los platos sin sabor. Nuestras recetas son
+          <strong>divertidas, coloridas y deliciosas</strong> — porque cuidarte
+          también puede ser un placer.
+        </p>
+        <div class="hero-btns">
+          <a href="#desayunos" class="btn-naranja">Explorar recetas</a>
+          <a href="/frontend/src/app/pages/diet.html" class="btn-ghost-index">Ver dietas</a>
         </div>
       </div>
+      <img
+        src="/frontend/src/assets/img/bowlRecetas.png"
+        alt="Plato saludable"
+        class="hero-card-img-plato"
+      >
     </section>
-    <section class="seccion-recetas" id="recetas">
-      <div class="container">
-        <h2>Nuestras recetas</h2>
-        <p class="subtitulo">Encuentra la receta perfecta para ti</p>
 
-        <div class="row g-4">
-
-          <div class="col-sm-6 col-lg-3">
-            <div class="card-receta">
-              <img src="../../assets/img/platoComida.jpeg" alt="Ensalada César" class="card-receta-img">
-              <div class="card-receta-body">
-                <h5>Ensalada César</h5>
-                <div class="card-receta-estrellas">
-                  ★★★★☆ <span class="card-receta-rating-num">4.0</span>
-                </div>
-              </div>
-              <div class="card-receta-footer footer-naranja">
-                <span>Ensaladas</span>
-                <a href="#">Ver receta</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-lg-3">
-            <div class="card-receta">
-              <img src="../../assets/img/platoComida.jpeg" alt="Ensalada César" class="card-receta-img">
-              <div class="card-receta-body">
-                <h5>Ensalada César</h5>
-                <div class="card-receta-estrellas">
-                  ★★★★☆ <span class="card-receta-rating-num">4.0</span>
-                </div>
-              </div>
-              <div class="card-receta-footer footer-naranja">
-                <span>Ensaladas</span>
-                <a href="#">Ver receta</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-lg-3">
-            <div class="card-receta">
-              <img src="../../assets/img/platoComida.jpeg" alt="Ensalada César" class="card-receta-img">
-              <div class="card-receta-body">
-                <h5>Ensalada César</h5>
-                <div class="card-receta-estrellas">
-                  ★★★★☆ <span class="card-receta-rating-num">4.0</span>
-                </div>
-              </div>
-              <div class="card-receta-footer footer-naranja">
-                <span>Ensaladas</span>
-                <a href="#">Ver receta</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-lg-3">
-            <div class="card-receta">
-              <img src="../../assets/img/platoComida.jpeg" alt="Ensalada César" class="card-receta-img">
-              <div class="card-receta-body">
-                <h5>Ensalada César</h5>
-                <div class="card-receta-estrellas">
-                  ★★★★☆ <span class="card-receta-rating-num">4.0</span>
-                </div>
-              </div>
-              <div class="card-receta-footer footer-naranja">
-                <span>Ensaladas</span>
-                <a href="#">Ver receta</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-lg-3">
-            <div class="card-receta">
-              <img src="../../assets/img/platoComida.jpeg" alt="Ensalada César" class="card-receta-img">
-              <div class="card-receta-body">
-                <h5>Ensalada César</h5>
-                <div class="card-receta-estrellas">
-                  ★★★★☆ <span class="card-receta-rating-num">4.0</span>
-                </div>
-              </div>
-              <div class="card-receta-footer footer-naranja">
-                <span>Ensaladas</span>
-                <a href="#">Ver receta</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-lg-3">
-            <div class="card-receta">
-              <img src="../../assets/img/platoComida.jpeg" alt="Ensalada César" class="card-receta-img">
-              <div class="card-receta-body">
-                <h5>Ensalada César</h5>
-                <div class="card-receta-estrellas">
-                  ★★★★☆ <span class="card-receta-rating-num">4.0</span>
-                </div>
-              </div>
-              <div class="card-receta-footer footer-naranja">
-                <span>Ensaladas</span>
-                <a href="#">Ver receta</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-lg-3">
-            <div class="card-receta">
-              <img src="../../assets/img/platoComida.jpeg" alt="Ensalada César" class="card-receta-img">
-              <div class="card-receta-body">
-                <h5>Ensalada César</h5>
-                <div class="card-receta-estrellas">
-                  ★★★★☆ <span class="card-receta-rating-num">4.0</span>
-                </div>
-              </div>
-              <div class="card-receta-footer footer-naranja">
-                <span>Ensaladas</span>
-                <a href="#">Ver receta</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-lg-3">
-            <div class="card-receta">
-              <img src="../../assets/img/platoComida.jpeg" alt="Ensalada César" class="card-receta-img">
-              <div class="card-receta-body">
-                <h5>Ensalada César</h5>
-                <div class="card-receta-estrellas">
-                  ★★★★☆ <span class="card-receta-rating-num">4.0</span>
-                </div>
-              </div>
-              <div class="card-receta-footer footer-naranja">
-                <span>Ensaladas</span>
-                <a href="#">Ver receta</a>
-              </div>
-            </div>
-          </div>
-
+    <!-- ═══════════ FRANJA 1 — DESAYUNOS ═══════════ -->
+    <section class="franja-card" id="desayunos">
+      <div class="franja-header">
+        <div>
+          <div class="franja-badge">🌅 Desayunos</div>
+          <h2 class="franja-titulo">Empieza el día con energía</h2>
+          <p class="franja-sub">Recetas rápidas y nutritivas para arrancar con todo</p>
         </div>
+        <a href="#" class="btn-ver-todo">Ver todas →</a>
       </div>
+      <div class="cards-grid" id="gridDesayunos"></div>
+    </section>
+
+    <!-- ═══════════ FRANJA 2 — ALMUERZOS ═══════════ -->
+    <section class="franja-card franja-card--alt" id="almuerzos">
+      <div class="franja-header">
+        <div>
+          <div class="franja-badge">☀️ Almuerzos</div>
+          <h2 class="franja-titulo">El plato fuerte del día</h2>
+          <p class="franja-sub">Comidas completas que te dan la energía que necesitas</p>
+        </div>
+        <a href="#" class="btn-ver-todo">Ver todas →</a>
+      </div>
+      <div class="cards-grid" id="gridAlmuerzos"></div>
+    </section>
+
+    <!-- ═══════════ FRANJA 3 — CENAS ═══════════ -->
+    <section class="franja-card" id="cenas">
+      <div class="franja-header">
+        <div>
+          <div class="franja-badge">🌙 Cenas</div>
+          <h2 class="franja-titulo">Termina el día ligero</h2>
+          <p class="franja-sub">Recetas suaves y reconfortantes para cerrar la jornada</p>
+        </div>
+        <a href="#" class="btn-ver-todo">Ver todas →</a>
+      </div>
+      <div class="cards-grid" id="gridCenas"></div>
     </section>
 
   </main>
+
   <div id="footer-container"></div>
 
   <script src="/frontend/src/assets/js/footer.js"></script>
   <script src="/frontend/src/assets/js/nav.js"></script>
-  <script src="/frontend/src/assets/js/variablesDeUsuarioLogueado.js"></script>
+  <script src="/frontend/src/assets/js/recetas.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
