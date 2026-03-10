@@ -22,4 +22,12 @@ fetch('/frontend/src/app/components/navbar.html')
         document.querySelectorAll('.navbar-neup .nav-link').forEach(link => {
             if (link.href === window.location.href) link.classList.add('active');
         });
+
+        const logout = document.querySelector('#logout')
+
+        logout.addEventListener('click', () => {
+            alert('Hasta pronto!')
+            localStorage.removeItem('UsuarioLogueado')
+            window.location.href = '/frontend/src/app/pages/RegistroEInicioDeSesión.html'
+        })
     });
