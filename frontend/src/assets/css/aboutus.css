@@ -1,0 +1,76 @@
+@import "./style.css";
+
+.contactenos__imagen-img {
+    width: 25rem;
+    height: 28.125rem;
+    border-radius: 20%;
+}
+
+.caracteristicas__content-elementos {
+    border: var(--botonesSecciones);
+}
+
+.equipo__participante-h3,
+.contactenos__form-input,
+.contactenos__form-label,
+.caracteristicas__content-item{
+    font-family: var(--letra);
+}
+
+.contactenos__form-label{
+    font-size: var(--label-size);
+}
+
+.contactenos__form-txr{
+    resize: none;
+    border-color: var(--botonesSecciones);
+}
+
+.equipo__tittle-p,
+.equipo__tittle-h1{
+    text-align: center;
+}
+
+.equipo__participante-img{
+    height: 18.75rem;
+    width: 18.75rem;
+}
+
+.daniela{
+    height: 16.875rem;
+    width: 15.625rem;
+}
+
+.equipo__participante{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.equipo__participante-h3{
+    font-size: var(--subtittle-size-dos);
+    text-align: center;
+    color: var(--negro);
+}
+
+.caracteristicas__content-item{
+    margin-bottom: 8px;
+}
+
+.contactenos__form-input{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-color: var(--botonesSecciones);
+}
+
+.contactenos__form-btn{
+    background-color: var(--botonesSecciones);
+    border-color: var(--botonesHover);
+}
+.contactenos__form-btn:hover{
+    background-color: var(--nav-btn-naranja-hover);
+    border-color: var(--botonesHover);
+}

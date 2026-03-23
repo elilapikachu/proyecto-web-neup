@@ -1,5 +1,5 @@
 .mainIndex {
-  background-image: url('/frontend/src/assets/img/fondoPerfil.png');
+  background-image: url('../img/fondoPerfil.png');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -110,7 +110,7 @@
 /* Título */
 .hero-title {
   font-family: var(--letra-titulo);
-  font-size: 2.8rem;
+  font-size: var(--tittle-size);
   font-weight: 700;
   color: var(--textoOscuro);
   line-height: 1.15;
@@ -123,7 +123,7 @@
 
 .hero-subtitle {
   font-family: var(--letra);
-  font-size: .98rem;
+  font-size: var(--subtitle_size);
   color: var(--textoSuave);
   margin-bottom: 28px;
   max-width: 420px;

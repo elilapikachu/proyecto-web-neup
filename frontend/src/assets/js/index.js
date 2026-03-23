@@ -33,21 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // ──────────────────────────────────────────────────────────
 
   const dietas = [
-    { nombre: 'Dieta Mediterránea', imagen: '/frontend/src/assets/img/platoComida.jpeg' },
-    { nombre: 'Dieta Keto',         imagen: '/frontend/src/assets/img/platoComida.jpeg' },
-    { nombre: 'Dieta Vegana',       imagen: '/frontend/src/assets/img/platoComida.jpeg' },
+    { nombre: 'Dieta Mediterránea', imagen: './assets/img/platoComida.jpeg' },
+    { nombre: 'Dieta Keto',         imagen: './assets/img/platoComida.jpeg' },
+    { nombre: 'Dieta Vegana',       imagen: './assets/img/platoComida.jpeg' },
   ];
 
   const recetas = [
-    { nombre: 'Ensalada César',  imagen: '/frontend/src/assets/img/platoComida.jpeg' },
-    { nombre: 'Bowl de Quinoa', imagen: '/frontend/src/assets/img/platoComida.jpeg' },
-    { nombre: 'Smoothie Verde', imagen: '/frontend/src/assets/img/platoComida.jpeg' },
+    { nombre: 'Ensalada César',  imagen: './assets/img/platoComida.jpeg' },
+    { nombre: 'Bowl de Quinoa', imagen: './assets/img/platoComida.jpeg' },
+    { nombre: 'Smoothie Verde', imagen: './assets/img/platoComida.jpeg' },
   ];
 
   document.getElementById('gridDietas').innerHTML =
-    dietas.map(d => crearItemCard(d, '/frontend/src/app/pages/diet.html')).join('');
+    dietas.map(d => crearItemCard(d, '../../app/components/diet.html')).join('');
 
   document.getElementById('gridRecetas').innerHTML =
-    recetas.map(r => crearItemCard(r, '/frontend/src/app/pages/recipes.html')).join('');
+    recetas.map(r => crearItemCard(r, '../../app/components/recipes.html')).join('');
 
 });

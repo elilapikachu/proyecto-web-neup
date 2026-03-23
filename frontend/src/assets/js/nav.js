@@ -28,6 +28,6 @@ fetch('/frontend/src/app/components/navbar.html')
         logout.addEventListener('click', () => {
             alert('Hasta pronto!')
             localStorage.removeItem('UsuarioLogueado')
-            window.location.href = '/frontend/src/app/pages/RegistroEInicioDeSesión.html'
+            window.location.href = '/frontend/src/app/pages/registerAndLogin.html'
         })
     });
