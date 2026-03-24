@@ -1,10 +1,5 @@
-.mainRecetas {
-    background-image: url('/frontend/src/assets/img/fondoPerfil.png');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-}
+@use '../../../styles/fondos/predeterminado.scss' as *;
+@use '../../../styles/cards/general-cards.scss' as *;
 
 .hero-recetas-card {
     overflow: hidden;
