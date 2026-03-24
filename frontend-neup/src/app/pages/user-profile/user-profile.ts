@@ -4,9 +4,9 @@ import {Navbar} from '../navbar/navbar';
 import {Footer} from '../footer/footer';
 
 @Component({
-  selector: 'app-diet',
+  selector: 'app-user-profile',
   imports: [RouterLink,Navbar, Footer],
-  templateUrl: './diet.html',
-  styleUrl: './diet.scss',
+  templateUrl: './user-profile.html',
+  styleUrl: './user-profile.scss',
 })
-export class Diet {}
+export class UserProfile {}

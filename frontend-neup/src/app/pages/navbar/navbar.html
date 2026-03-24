@@ -1,1 +1,39 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg navbar-neup">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">NEUP</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus" >Sobre nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/diet">Dietas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/recipes">Recetas</a>
+        </li>
+      </ul>
+      <div class="nav__btnSesion d-flex gap-2">
+        <div id="registro">
+          <a class="btn btn-outline-success" routerLink="/loginandregister">Iniciar sesión</a>
+          <a class="btn btn-success" routerLink="/loginandregister">Registrarse</a>
+        </div>
+        <div id="logueado" class="d-none">
+          <a class="nav__item-txt nav-link" id="usuarioPerfil"
+            routerLink="/userprofile">Nom_Usuario</a>
+
+          <button class="btn btn-success cerrar submit-btn" id="logout">
+            <b>Cerrar Sesión</b>
+          </button>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,171 @@
+<app-navbar></app-navbar>
+<main class="mainIndex mainPerfil">
+    <div class="page-wrapper">
+        <div class="profile-hero">
+            <div class="avatar-wrap">
+                <div class="avatar-letter" id="avatarLetter">N</div>
+            </div>
+            <div class="profile-info">
+                <h2 class="profile-name" id="usuarioName">Nom_Usuario</h2>
+                <p class="profile-email" id="profileEmail">usuario@email.com</p>
+                <div class="completion-wrap">
+                    <div class="completion-bar-bg">
+                        <div class="completion-bar-fill" id="completionBar" style="width:0%"></div>
+                    </div>
+                    <span class="completion-pct" id="completionPct">0% completado</span>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn-orange" id="btnToggleForm">
+                        ✦ Completar perfil
+                    </button>
+                    <button class="btn-outline-green" onclick="scrollToForm()">Ver mis datos</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-row" id="statsRow">
+            <div class="stat-card">
+                <div class="stat-icon">⚖️</div>
+                <p class="stat-value" id="statPeso">-</p>
+                <p class="stat-label">Peso (kg)</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📏</div>
+                <p class="stat-value" id="statEstatura">—</p>
+                <p class="stat-label">Estatura (cm)</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <p class="stat-value" id="statObjetivo">—</p>
+                <p class="stat-label">Objetivo</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏃</div>
+                <span class="stat-value" id="statActividad">—</span>
+                <span class="stat-label">Actividad</span>
+            </div>
+        </div>
+        <div class="form-section" id="formSection">
+            <h3 class="section-title" id="formTitle">Completa tu perfil</h3>
+            <p class="section-subtitle">Esta información nos ayuda a personalizar tu experiencia nutricional.</p>
+            <div class="neup-tabs">
+                <button class="neup-tab active" onclick="switchTab('sec1', this)">Datos físicos</button>
+                <button class="neup-tab" onclick="switchTab('sec2', this)">Preferencias alimenticias</button>
+            </div>
+            <div class="tab-pane-neup active" id="sec1">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label class="field-label">Edad</label>
+                        <input type="number" class="neup-input inputs" id="inputEdad" placeholder="25" min="10"
+                            max="100" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="field-label">Estatura (cm)</label>
+                        <input type="number" class="neup-input inputs" id="inputEstatura" placeholder="170" min="100"
+                            max="250" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label class="field-label">Peso actual (kg)</label>
+                        <input type="number" class="neup-input inputs" id="inputPeso" placeholder="70" min="30"
+                            max="300" />
+                    </div>
+                </div>
+
+                <label class="field-label">Objetivo</label>
+                <select class="neup-select inputs" id="inputObjetivo">
+                    <option value="">Selecciona tu objetivo</option>
+                    <option>Bajar de peso</option>
+                    <option>Mantener peso</option>
+                    <option>Subir masa muscular</option>
+                    <option>Comer saludable</option>
+                </select>
+
+                <h5 class="subtitulo">Actividad física</h5>
+
+                <label class="field-label">Frecuencia semanal</label>
+                <select class="neup-select inputs" id="inputFrecuencia">
+                    <option value="">Selecciona frecuencia</option>
+                    <option>No hago ejercicio</option>
+                    <option>1–2 veces</option>
+                    <option>3–4 veces</option>
+                    <option>5 o más veces</option>
+                </select>
+
+                <label class="field-label">Tipo de actividad</label>
+                <select class="neup-select inputs" id="inputTipoActividad">
+                    <option value="">Selecciona tipo</option>
+                    <option>Gimnasio</option>
+                    <option>Deporte</option>
+                    <option>Caminar / correr</option>
+                    <option>Yoga / pilates</option>
+                    <option>Mixto</option>
+                </select>
+
+                <div class="d-flex justify-content-end">
+                    <button class="btn-orange" style="width:auto;padding:10px 28px"
+                        onclick="switchTab('sec2', null, true)">
+                        Siguiente →
+                    </button>
+                </div>
+            </div>
+
+            <div class="tab-pane-neup" id="sec2">
+                <label class="field-label">Tipo de dieta</label>
+                <select class="neup-select inputs" id="inputDieta">
+                    <option value="">Selecciona dieta</option>
+                    <option>Ninguna</option>
+                    <option>Vegetariana</option>
+                    <option>Vegana</option>
+                    <option>Keto</option>
+                    <option>Mediterránea</option>
+                    <option>Sin gluten</option>
+                </select>
+
+                <label class="field-label">Alergias</label>
+                <select class="neup-select inputs" id="inputAlergias">
+                    <option value="">Selecciona alergia</option>
+                    <option>Ninguna</option>
+                    <option>Gluten</option>
+                    <option>Lactosa</option>
+                    <option>Frutos secos</option>
+                    <option>Mariscos</option>
+                    <option>Huevo</option>
+                    <option>Soya</option>
+                </select>
+
+                <label class="field-label">Comidas al día</label>
+                <select class="neup-select inputs" id="inputComidas">
+                    <option value="">Selecciona frecuencia</option>
+                    <option>1–2</option>
+                    <option>3</option>
+                    <option>4–5</option>
+                </select>
+
+                <label class="field-label">Consumo de comida rápida</label>
+                <select class="neup-select inputs" id="inputComidarapida">
+                    <option value="">Selecciona frecuencia</option>
+                    <option>Nunca</option>
+                    <option>1 vez por semana</option>
+                    <option>2–3 veces por semana</option>
+                    <option>Más de 3 veces</option>
+                </select>
+
+                <div class="d-flex gap-3">
+                    <button class="btn-outline-green botonesDeGuardado" style="flex:1"
+                        onclick="switchTab('sec1', null, false, true)">
+                        ← Anterior
+                    </button>
+                    <button class="btn-save botonesDeGuardado" style="flex:2" onclick="guardarPerfil()">
+                        Guardar perfil
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="toast-neup" id="toastNeup">
+        <span id="toastMsg">Perfil guardado correctamente</span>
+    </div>
+
+</main>
+<app-footer></app-footer>
