@@ -1,38 +1,57 @@
 <div class="container_registro">
     <div class="lado_imagen"></div>
+
     <div class="from__box">
         <div class="button__box">
-            <div id="elegir" class="btn_registro_inicio_secion"> </div>
-            <button type="button" class="toggle-btn" id="InicioSesionBtn" onclick="InicioSesion()">Iniciar
-                Sesión</button>
-            <button type="button" class="toggle-btn" id="registroBtn" onclick="registro1()">Registro</button>
+            <!-- Píldora deslizante: se mueve según el modo activo -->
+            <div class="slider-pill" [class.slider-pill--registro]="isRegister()"></div>
+
+            <button type="button" class="toggle-btn" [class.toggle-btn--active]="isLogin()" (click)="setMode('login')">
+                Iniciar Sesión
+            </button>
+
+            <button type="button" class="toggle-btn" [class.toggle-btn--active]="isRegister()"
+                (click)="setMode('register')">
+                Registro
+            </button>
         </div>
-        <form id="registro1" class="grupos">
-            <input type="text" class="inputs" id="NomApe" placeholder="Nombre y Apellidos" required>
-            <select class="form-select-genero inputs" id="genero" required>
+
+        <!-- Formulario Inicio de Sesión -->
+        <form class="grupos" [class.grupos--visible]="isLogin()" [class.grupos--oculto]="isRegister()"
+            (ngSubmit)="onLoginSubmit()">
+            <input type="email" class="inputs" placeholder="Email" required />
+            <input type="password" class="inputs" placeholder="Contraseña" required />
+            <div class="checkbox-row">
+                <input type="checkbox" class="checkbox" id="recordatorio" />
+                <label class="spanRegistro" for="recordatorio">Recordar Contraseña</label>
+            </div>
+            <button type="submit" class="submit-btn">Acceder</button>
+        </form>
+
+        <!-- Formulario Registro -->
+        <form class="grupos" [class.grupos--visible]="isRegister()" [class.grupos--oculto]="isLogin()"
+            (ngSubmit)="onRegisterSubmit()">
+            <input type="text" class="inputs" placeholder="Nombre y Apellidos" required />
+            <select class="inputs" required>
                 <option value="" disabled selected>Género</option>
                 <option value="0">Masculino</option>
                 <option value="1">Femenino</option>
                 <option value="2">Otro</option>
                 <option value="3">Prefiero no decirlo</option>
             </select>
-            <input type="email" class="inputs" id="Email_Registro" placeholder="Email" required>
-            <input type="password" class="inputs" placeholder="Contraseña" id="contrasena_registro" required>
-            <input type="checkbox" class="checkbox" id="Terminos" required><span class="spanRegistro">Acepto los
-                terminos y
-                condiciones</span>
-            <button type="submit" class="submit-btn" id="sesion">Registrarse</button>
-        </form>
-        <form id="InicioSesion" class="grupos">
-            <input type="email" class="inputs" id="Email_Sesion" placeholder="Email" required>
-            <input type="password" class="inputs" placeholder="Contraseña" id="contrasena_sesion" required>
-            <input type="checkbox" class="checkbox" id="recordatorio"><span class="spanRegistro">Recordar
-                Contraseña</span>
-            <button type="submit" class="submit-btn">Acceder</button>
+            <input type="email" class="inputs" placeholder="Email" required />
+            <input type="password" class="inputs" placeholder="Contraseña" required />
+            <div class="checkbox-row">
+                <input type="checkbox" class="checkbox" id="terminos" required />
+                <label class="spanRegistro" for="terminos">Acepto los términos y condiciones</label>
+            </div>
+            <button type="submit" class="submit-btn">Registrarse</button>
         </form>
     </div>
+
     <div class="volverPaginaPrincipal">
-        <button class="submit-btn btn_regresar_pagina_principal"><a routerLink="/">Volver a la página
-                principal</a> </button>
+        <button class="submit-btn btn_regresar_pagina_principal">
+            <a routerLink="/">Volver a la página principal</a>
+        </button>
     </div>
 </div>
