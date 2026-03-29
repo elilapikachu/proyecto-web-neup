@@ -7,33 +7,34 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/">Inicio</a>
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/aboutus" >Sobre nosotros</a>
+          <a class="nav-link" routerLink="/aboutus" routerLinkActive="active">Sobre nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/diet">Dietas</a>
+          <a class="nav-link" routerLink="/diet" routerLinkActive="active">Dietas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/recipes">Recetas</a>
+          <a class="nav-link" routerLink="/recipes" routerLinkActive="active">Recetas</a>
         </li>
       </ul>
+
       <div class="nav__btnSesion d-flex gap-2">
-        <div id="registro">
+        <div id="registro" class="d-flex gap-2" *ngIf="!estaLogueado">
           <a class="btn btn-outline-success" routerLink="/loginandregister">Iniciar sesión</a>
           <a class="btn btn-success" routerLink="/loginandregister">Registrarse</a>
         </div>
-        <div id="logueado" class="d-none">
-          <a class="nav__item-txt nav-link" id="usuarioPerfil"
-            routerLink="/userprofile">Nom_Usuario</a>
-
-          <button class="btn btn-success cerrar submit-btn" id="logout">
+        <div id="logueado" class="d-flex align-items-center gap-2" *ngIf="estaLogueado">
+          <a class="nav__item-txt nav-link Nom_usuario" routerLink="/userprofile">
+            {{ nombreUsuario }}
+          </a>
+          <button class="btn btn-success cerrar" (click)="cerrarSesion()">
             <b>Cerrar Sesión</b>
           </button>
         </div>
+
       </div>
-    
     </div>
   </div>
 </nav>

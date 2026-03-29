@@ -49,17 +49,14 @@ export class LoginAndRegister {
     this.limpiarMensajes();
   }
 
-  // ── Getters login ────────────────────────────────────────
   get lUsuario()  { return this.loginForm.get('usuario');  }
   get lPassword() { return this.loginForm.get('password'); }
 
-  // ── Getters register ─────────────────────────────────────
   get rUsuario()  { return this.registerForm.get('usuario');  }
   get rEmail()    { return this.registerForm.get('email');    }
   get rPassword() { return this.registerForm.get('password'); }
   get rTerminos() { return this.registerForm.get('terminos'); }
 
-  // ── Mensajes temporales ──────────────────────────────────
   private limpiarMensajes(): void {
     this.errorMensaje = '';
     this.exitoMensaje = '';

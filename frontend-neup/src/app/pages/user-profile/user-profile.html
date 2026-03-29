@@ -3,76 +3,84 @@
     <div class="page-wrapper">
         <div class="profile-hero">
             <div class="avatar-wrap">
-                <div class="avatar-letter" id="avatarLetter">N</div>
+                <div class="avatar-letter">{{ avatarLetra }}</div>
             </div>
             <div class="profile-info">
-                <h2 class="profile-name" id="usuarioName">Nom_Usuario</h2>
-                <p class="profile-email" id="profileEmail">usuario@email.com</p>
+                <h2 class="profile-name">{{ nombreUsuario }}</h2>
+                <p class="profile-email">{{ email }}</p>
                 <div class="completion-wrap">
                     <div class="completion-bar-bg">
-                        <div class="completion-bar-fill" id="completionBar" style="width:0%"></div>
+                        <div class="completion-bar-fill" [style.width.%]="completionPct"></div>
                     </div>
-                    <span class="completion-pct" id="completionPct">0% completado</span>
+                    <span class="completion-pct">{{ completionPct }}% completado</span>
                 </div>
                 <div class="hero-actions">
-                    <button class="btn-orange" id="btnToggleForm">
-                        ✦ Completar perfil
+                    <button class="btn-orange" (click)="toggleForm()">
+                        {{ perfilGuardado ? '✎ Editar perfil' : '✦ Completar perfil' }}
                     </button>
-                    <button class="btn-outline-green" onclick="scrollToForm()">Ver mis datos</button>
+                    <button class="btn-outline-green" (click)="scrollToForm()">Ver mis datos</button>
                 </div>
             </div>
         </div>
 
-        <div class="stats-row" id="statsRow">
+        <div class="stats-row">
             <div class="stat-card">
                 <div class="stat-icon">⚖️</div>
-                <p class="stat-value" id="statPeso">-</p>
+                <p class="stat-value">{{ statPeso }}</p>
                 <p class="stat-label">Peso (kg)</p>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">📏</div>
-                <p class="stat-value" id="statEstatura">—</p>
+                <p class="stat-value">{{ statEstatura }}</p>
                 <p class="stat-label">Estatura (cm)</p>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">🎯</div>
-                <p class="stat-value" id="statObjetivo">—</p>
+                <p class="stat-value">{{ statObjetivo }}</p>
                 <p class="stat-label">Objetivo</p>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">🏃</div>
-                <span class="stat-value" id="statActividad">—</span>
+                <span class="stat-value">{{ statActividad }}</span>
                 <span class="stat-label">Actividad</span>
             </div>
         </div>
-        <div class="form-section" id="formSection">
-            <h3 class="section-title" id="formTitle">Completa tu perfil</h3>
+
+        <div class="form-section" id="formSection" [class.visible]="formVisible">
+            <h3 class="section-title">{{ formTitulo }}</h3>
             <p class="section-subtitle">Esta información nos ayuda a personalizar tu experiencia nutricional.</p>
+
             <div class="neup-tabs">
-                <button class="neup-tab active" onclick="switchTab('sec1', this)">Datos físicos</button>
-                <button class="neup-tab" onclick="switchTab('sec2', this)">Preferencias alimenticias</button>
+                <button class="neup-tab" [class.active]="tabActiva === 'sec1'" (click)="switchTab('sec1')">
+                    Datos físicos
+                </button>
+                <button class="neup-tab" [class.active]="tabActiva === 'sec2'" (click)="switchTab('sec2')">
+                    Preferencias alimenticias
+                </button>
             </div>
-            <div class="tab-pane-neup active" id="sec1">
+
+            <!-- Tab 1 -->
+            <div class="tab-pane-neup" [class.active]="tabActiva === 'sec1'">
                 <div class="row">
                     <div class="col-md-4 mb-3">
                         <label class="field-label">Edad</label>
-                        <input type="number" class="neup-input inputs" id="inputEdad" placeholder="25" min="10"
-                            max="100" />
+                        <input type="number" class="neup-input inputs" placeholder="25" min="10" max="100"
+                            [(ngModel)]="perfil.edad" />
                     </div>
                     <div class="col-md-4 mb-3">
                         <label class="field-label">Estatura (cm)</label>
-                        <input type="number" class="neup-input inputs" id="inputEstatura" placeholder="170" min="100"
-                            max="250" />
+                        <input type="number" class="neup-input inputs" placeholder="170" min="100" max="250"
+                            [(ngModel)]="perfil.estatura" />
                     </div>
                     <div class="col-md-4 mb-3">
                         <label class="field-label">Peso actual (kg)</label>
-                        <input type="number" class="neup-input inputs" id="inputPeso" placeholder="70" min="30"
-                            max="300" />
+                        <input type="number" class="neup-input inputs" placeholder="70" min="30" max="300"
+                            [(ngModel)]="perfil.peso" />
                     </div>
                 </div>
 
                 <label class="field-label">Objetivo</label>
-                <select class="neup-select inputs" id="inputObjetivo">
+                <select class="neup-select inputs" [(ngModel)]="perfil.objetivo">
                     <option value="">Selecciona tu objetivo</option>
                     <option>Bajar de peso</option>
                     <option>Mantener peso</option>
@@ -83,7 +91,7 @@
                 <h5 class="subtitulo">Actividad física</h5>
 
                 <label class="field-label">Frecuencia semanal</label>
-                <select class="neup-select inputs" id="inputFrecuencia">
+                <select class="neup-select inputs" [(ngModel)]="perfil.frecuencia">
                     <option value="">Selecciona frecuencia</option>
                     <option>No hago ejercicio</option>
                     <option>1–2 veces</option>
@@ -92,7 +100,7 @@
                 </select>
 
                 <label class="field-label">Tipo de actividad</label>
-                <select class="neup-select inputs" id="inputTipoActividad">
+                <select class="neup-select inputs" [(ngModel)]="perfil.tipoActividad">
                     <option value="">Selecciona tipo</option>
                     <option>Gimnasio</option>
                     <option>Deporte</option>
@@ -102,16 +110,15 @@
                 </select>
 
                 <div class="d-flex justify-content-end">
-                    <button class="btn-orange" style="width:auto;padding:10px 28px"
-                        onclick="switchTab('sec2', null, true)">
+                    <button class="btn-orange" style="width:auto;padding:10px 28px" (click)="switchTab('sec2')">
                         Siguiente →
                     </button>
                 </div>
             </div>
 
-            <div class="tab-pane-neup" id="sec2">
+            <div class="tab-pane-neup" [class.active]="tabActiva === 'sec2'">
                 <label class="field-label">Tipo de dieta</label>
-                <select class="neup-select inputs" id="inputDieta">
+                <select class="neup-select inputs" [(ngModel)]="perfil.dieta">
                     <option value="">Selecciona dieta</option>
                     <option>Ninguna</option>
                     <option>Vegetariana</option>
@@ -122,7 +129,7 @@
                 </select>
 
                 <label class="field-label">Alergias</label>
-                <select class="neup-select inputs" id="inputAlergias">
+                <select class="neup-select inputs" [(ngModel)]="perfil.alergias">
                     <option value="">Selecciona alergia</option>
                     <option>Ninguna</option>
                     <option>Gluten</option>
@@ -134,7 +141,7 @@
                 </select>
 
                 <label class="field-label">Comidas al día</label>
-                <select class="neup-select inputs" id="inputComidas">
+                <select class="neup-select inputs" [(ngModel)]="perfil.comidas">
                     <option value="">Selecciona frecuencia</option>
                     <option>1–2</option>
                     <option>3</option>
@@ -142,7 +149,7 @@
                 </select>
 
                 <label class="field-label">Consumo de comida rápida</label>
-                <select class="neup-select inputs" id="inputComidarapida">
+                <select class="neup-select inputs" [(ngModel)]="perfil.comidaRapida">
                     <option value="">Selecciona frecuencia</option>
                     <option>Nunca</option>
                     <option>1 vez por semana</option>
@@ -151,21 +158,20 @@
                 </select>
 
                 <div class="d-flex gap-3">
-                    <button class="btn-outline-green botonesDeGuardado" style="flex:1"
-                        onclick="switchTab('sec1', null, false, true)">
+                    <button class="btn-outline-green botonesDeGuardado" style="flex:1" (click)="switchTab('sec1')">
                         ← Anterior
                     </button>
-                    <button class="btn-save botonesDeGuardado" style="flex:2" onclick="guardarPerfil()">
+                    <button class="btn-save botonesDeGuardado" style="flex:2" (click)="guardarPerfil()">
                         Guardar perfil
                     </button>
                 </div>
             </div>
-
         </div>
     </div>
-    <div class="toast-neup" id="toastNeup">
-        <span id="toastMsg">Perfil guardado correctamente</span>
-    </div>
 
+    <!-- Toast -->
+    <div class="toast-neup" [class.show]="toastVisible">
+        <span>{{ toastMensaje }}</span>
+    </div>
 </main>
 <app-footer></app-footer>
