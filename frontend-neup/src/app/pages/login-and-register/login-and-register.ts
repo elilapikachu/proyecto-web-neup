@@ -74,7 +74,6 @@ export class LoginAndRegister {
     setTimeout(() => this.exitoMensaje = '', 3500);
   }
 
-  // ── Login ────────────────────────────────────────────────
   onLoginSubmit(): void {
     if (this.loginForm.invalid) {
       this.loginForm.markAllAsTouched();
@@ -105,7 +104,6 @@ export class LoginAndRegister {
     });
   }
 
-  // ── Registro ─────────────────────────────────────────────
   onRegisterSubmit(): void {
     if (this.registerForm.invalid) {
       this.registerForm.markAllAsTouched();

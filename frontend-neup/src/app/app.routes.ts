@@ -5,6 +5,7 @@ import { Aboutus } from './pages/aboutus/aboutus';
 import { Recipes } from './pages/recipes/recipes';
 import { Diet } from './pages/diet/diet';
 import { UserProfile } from './pages/user-profile/user-profile';
+import { Creatediet } from './pages/creatediet/creatediet';
 import path from 'path';
 
 export const routes: Routes = [
@@ -14,5 +15,6 @@ export const routes: Routes = [
     { path: 'recipes', component: Recipes }, 
     { path: 'diet', component: Diet },   
     { path: 'userprofile', component: UserProfile },
+    { path: 'creatediet', component: Creatediet },
     { path: '**', redirectTo: '' } //ruta no encontrada 
 ];

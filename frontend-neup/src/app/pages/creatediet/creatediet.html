@@ -1,0 +1,172 @@
+<app-navbar></app-navbar>
+<main class="diet mainIndex">
+    <div class="page-wrapper-index">
+        <section class="formulario__section hero-card d-flex flex-column">
+            <div class="create-diete-tittle border-bottom d-flex flex-column align-items-center">
+                <h1 class="hero-title text-xl-center">Bienvenido a la sección de <span>crear dietas</span> personalizadas</h1>
+                <h3 class="hero-subtitle text-center">Crea una dieta que se ajuste a tus necesidades y creatividad</h3>
+            </div>
+            <form action="" method="post" class="formulario__form mt-3">
+                <div class="formulario__container row">
+                    <div class="formulario__content col">
+                        <div class="formulario__tittle">
+                            <h1 class="formulario__tittle-h1 hero-title">Información Basica</h1>
+                            <p class="formulario__tittle-p hero-subtitle">Ingresa la información basica de tu dieta
+                            </p>
+                        </div>
+                        <div class="formulario__component-div">
+                            <label for="nombreDieta" class="formulario__component-label">¡Ingresa un nombre creativo
+                                para tu
+                                dieta!</label>
+                            <div class="formulario__component-input">
+                                <input type="text" name="nombreDieta" id="nombreDieta" class="formulario__input"
+                                    placeholder="Nombre dieta">
+                            </div>
+                        </div>
+                        <div class="formulario__component-div">
+                            <label for="descripcion" class="formulario__component-label">Descripción de tu dieta</label>
+                            <div class="formulario__component-input">
+                                <input type="text" name="descripcion" id="descripcion" class="formulario__input"
+                                    placeholder="Nombre dieta">
+                            </div>
+                        </div>
+                        <div class="formulario__component-div">
+                            <label for="visibilidad" class="formulario__component-label">Selecciona la visibiilidad para
+                                tu nueva dieta</label>
+                            <div class="formulario__component-input">
+                                <label for="lunes" class="formulario__component-label">Publica</label>
+                                <input type="radio" name="visibilidad" id="visibilidadPublica" value="publica">
+                                <label for="lunes" class="formulario__component-label">Privada</label>
+                                <input type="radio" name="visibilidad" id="visibilidadPrivada" value="privada">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formulario__container row">
+                    <div class="formulario__tittle">
+                        <h1 class="formulario__tittle-h1 hero-title">Metas</h1>
+                        <p class="formulario__tittle-p hero-subtitle">¿Que metas tendra tu dieta?
+                        </p>
+                    </div>
+                    <div class="formulario__component-div">
+                        <div class="container mt-5">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card shadow-sm">
+                                        <div class="card-body">
+                                            <div class="tags-container">
+                                                <div class="d-flex flex-wrap gap-2">
+                                                    <div *ngFor="let tag of tags" class="tag-wrapper">
+                                                        <input type="checkbox" class="tag-checkbox"
+                                                            [id]="'tag-' + tag.id" [checked]="tag.selected"
+                                                            (change)="toggleTag(tag)" />
+                                                        <label [for]="'tag-' + tag.id" class="tag-label"
+                                                            [class.active]="tag.selected">
+                                                            {{ tag.label }}
+                                                            <button *ngIf="tag.custom" type="button"
+                                                                class="btn-remove-tag" (click)="removeTag(tag)"
+                                                                title="Eliminar tag">
+                                                            </button>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formulario__container row">
+                    <div class="formulario__tittle">
+                        <h1 class="formulario__tittle-h1 hero-title">Plan semanal</h1>
+                        <p class="formulario__tittle-p hero-subtitle">Aqui podras ingresar las recetas que estaran dentro de tu dieta
+                        </p>
+                    </div>
+                    <div class="formulario__plan">
+                        <div class="formulario__descripcion">
+                            <p class="formulario__descripcion-p">Ingresa los dias de la semana que va a tener tu dieta
+                            </p>
+                        </div>
+                        <div class="formulario__component-div">
+                            <div class="formulario__div-checkbox">
+                                <label for="lunes" class="formulario__component-label">Lunes</label>
+                                <div class="formulario__component-div">
+                                    <input type="checkbox" name="lunes" id="lunes" value="lunes">
+                                </div>
+                            </div>
+                            <div class="formulario__div-checkbox">
+                                <label for="martes" class="formulario__component-label">Martes</label>
+                                <div class="formulario__component-div">
+                                    <input type="checkbox" name="martes" id="martes" value="martes">
+                                </div>
+                            </div>
+                            <div class="formulario__div-checkbox">
+                                <label for="miercoles" class="formulario__component-label">Miercoles</label>
+                                <div class="formulario__component-div">
+                                    <input type="checkbox" name="miercoles" id="miercoles" value="miercoles">
+                                </div>
+                            </div>
+                            <div class="formulario__div-checkbox">
+                                <label for="jueves" class="formulario__component-label">Jueves</label>
+                                <div class="formulario__component-div">
+                                    <input type="checkbox" name="jueves" id="jueves" value="jueves">
+                                </div>
+                            </div>
+                            <div class="formulario__div-checkbox">
+                                <label for="viernes" class="formulario__component-label">Viernes</label>
+                                <div class="formulario__component-div">
+                                    <input type="checkbox" name="viernes" id="viernes" value="viernes">
+                                </div>
+                            </div>
+                            <div class="formulario__div-checkbox">
+                                <label for="sabado" class="formulario__component-label">Sabado</label>
+                                <div class="formulario__component-div">
+                                    <input type="checkbox" name="sabado" id="sabado" value="sabado">
+                                </div>
+                            </div>
+                            <div class="formulario__div-checkbox">
+                                <label for="domingo" class="formulario__component-label">Domingo</label>
+                                <div class="formulario__component-div">
+                                    <input type="checkbox" name="domingo" id="domingo" value="domingo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formulario__container row">
+                    <div class="formulario__buttons d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Regresar
+                        </button>
+                        <div class="formulario__buttons">
+                            <button class="btn btn-primary" type="submit">Crear Dieta</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Alerta</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ¿Estas seguro que quieres regresar?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" (click)="onReturn()">Si</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

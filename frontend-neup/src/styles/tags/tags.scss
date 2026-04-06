@@ -1,0 +1,218 @@
+.tags-container {
+  margin: 2rem 0;
+
+  .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+.tag-wrapper {
+  position: relative;
+  display: inline-block;
+
+  .tag-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+
+    &:checked + .tag-label {
+      background-color: var(--botonesSecciones);
+      color: var(--blanco);
+      border-color: var(--botonesSecciones);
+      box-shadow: 0 0 0 3px rgba(242, 94, 7, 0.15);
+
+      .btn-remove-tag {
+        color: var(--blanco);
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:focus + .tag-label {
+      outline: 2px solid var(--botonesSecciones);
+      outline-offset: 2px;
+    }
+  }
+
+  .tag-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--bordeCards);
+    border-radius: 20px;
+    background-color: var(--blanco);
+    color: var(--textoOscuro);
+    font-family: var(--letra);
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: all var(--transition-speed) ease;
+    margin: 0;
+
+    &:hover {
+      background-color: var(--transparente);
+      border-color: var(--botonesSecciones);
+      color: var(--botonesSecciones);
+    }
+
+    .btn-remove-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      margin-left: 0.25rem;
+      background: none;
+      border: none;
+      color: var(--textoSuave);
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: color var(--transition-speed) ease;
+
+      &:hover {
+        color: var(--botonesHover);
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 576px) {
+  .tag-label {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .tag-wrapper {
+    .tag-checkbox:checked + .tag-label {
+      box-shadow: 0 0 0 2px rgba(242, 94, 7, 0.15);
+    }
+  }
+}
+
+// Animación suave
+.tag-label {
+  &.active {
+    animation: tagPulse 0.3s ease-out;
+  }
+}
+
+@keyframes tagPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// Estilos para el contenedor de entrada
+.input-group {
+  margin-bottom: 1rem;
+
+  .form-control {
+    border: 2px solid var(--bordeCards);
+    color: var(--textoOscuro);
+    font-family: var(--letra);
+    transition: border-color var(--transition-speed) ease;
+
+    &:focus {
+      border-color: var(--botonesSecciones);
+      box-shadow: 0 0 0 3px rgba(242, 94, 7, 0.1);
+      color: var(--textoOscuro);
+    }
+
+    &::placeholder {
+      color: var(--textoSuave);
+      opacity: 0.7;
+    }
+  }
+
+  .btn {
+    border: 2px solid var(--botonesSecciones);
+    background-color: var(--botonesSecciones);
+    color: var(--blanco);
+    font-family: var(--letra);
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+
+    &:hover {
+      background-color: var(--botonesHover);
+      border-color: var(--botonesHover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(242, 94, 7, 0.2);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(242, 94, 7, 0.15);
+    }
+  }
+}
+
+.badge {
+  background-color: var(--botonesSecciones);
+  padding: 0.5rem 0.75rem;
+  font-family: var(--letra);
+  font-weight: 500;
+  animation: badgeFadeIn 0.3s ease-out;
+}
+
+@keyframes badgeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Resumen de tags
+.bg-light {
+  border-left: 4px solid var(--botonesSecciones);
+  background-color: var(--transparente) !important;
+
+  h5 {
+    color: var(--textoOscuro);
+    font-family: var(--letra-titulo);
+    font-weight: 600;
+  }
+}
+
+// Card
+.card {
+  border: 1px solid var(--bordeCards);
+  background-color: var(--blanco);
+
+  .card-title {
+    color: var(--textoOscuro);
+    font-family: var(--letra-titulo);
+  }
+
+  .card-body {
+    .form-label {
+      color: var(--textoOscuro);
+      font-family: var(--letra);
+    }
+  }
+}
+
+// Texto de información
+.text-muted {
+  color: var(--textoSuave) !important;
+}

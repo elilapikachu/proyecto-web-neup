@@ -1,0 +1,32 @@
+@use '../../../styles/fondos/predeterminado.scss' as *;
+@use '../../../styles/cards/general-cards.scss' as *;
+@use '../../../styles/tags/tags.scss' as *;
+
+.btn-primary {
+    background-color: var(--botonesSecciones);
+    border-color: var(--botonesHover);
+}
+
+.btn-primary:hover {
+    background-color: var(--botonesHover);
+    border-color: var(--botonesSecciones);
+}
+
+.btn-outline-primary {
+    border-color: var(--navFooder);
+    color: var(--navFooder);
+}
+
+.btn-outline-primary:hover{
+    background-color: var(--navFooderLight);
+    color: var(--nav-link-hover);
+}
+
+.formulario__input{
+    border: none;
+}
+
+.formulario__component-input{
+    border-bottom: 1px;
+    border-color: var(--botonesSecciones);
+}
