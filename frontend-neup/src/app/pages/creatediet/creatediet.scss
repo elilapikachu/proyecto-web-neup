@@ -2,7 +2,7 @@
 @use '../../../styles/cards/general-cards.scss' as *;
 @use '../../../styles/tags/tags.scss' as *;
 
-// ─── ANIMATIONS ───────────────────────────────────────────────────────────────
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -17,7 +17,6 @@
   to   { opacity: 1; transform: translateX(0); }
 }
 
-// ─── SECCIÓN PRINCIPAL ────────────────────────────────────────────────────────
 .formulario__section {
   flex-direction: column !important;
   align-items: stretch !important;
@@ -760,7 +759,6 @@
   }
 }
 
-// ─── RESPONSIVE ───────────────────────────────────────────────────────────────
 @media (max-width: 768px) {
   .visibilidad-opts  { flex-direction: column; }
   .dias-selector     { gap: 6px; }

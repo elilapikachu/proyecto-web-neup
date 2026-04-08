@@ -173,7 +173,7 @@ export class Creatediet implements OnInit {
     });
   }
 
-  // ── Catálogo de recetas ──
+
   todasLasRecetas: Receta[] = [
     { id: 1, nombre: 'Bowl de pollo y quinoa', img: '/assets/img/dietas/pollo-quinoa.jpg', kcal: 420, proteina: 38, carbs: 32, grasas: 9, categoria: 'proteina', categoriaLabel: 'Proteína', categoriaEmoji: '🍗' },
     { id: 2, nombre: 'Avena proteica con berries', img: '/assets/img/dietas/avena-frutos.jpg', kcal: 510, proteina: 28, carbs: 60, grasas: 12, categoria: 'desayuno', categoriaLabel: 'Desayuno', categoriaEmoji: '🌅' },
